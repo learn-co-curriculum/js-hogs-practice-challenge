@@ -11,11 +11,14 @@ class Hog {
   }
 
   hogHTML() {
+    let checked = this.greased == true ? 'checked' : ''
     return `
     <h2>${this.name}</h2>
     <img src='${this.image}' />
     <p>Specialty: ${this.specialty}</p>
     <p>Highest medal achieved: ${this.medal}</p>
+    <p>Weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water: ${this.weight}</p>
+    <p>Greased: <input data-id="${this.id}" class="toggle" type="checkbox" name="greased" value="greased" ${checked}><br></p>
     <button class="delete" data-id="${this.id}">Delete</button>`
   }
 
@@ -25,10 +28,22 @@ class Hog {
       method: 'DELETE'
     })
       .then(() => {
-        console.log('Successfully deleted hog', id)
         document.getElementById('hog-container')
           .removeChild(document.getElementById(id))
       })
+  }
+
+  greaseToggle(e) {
+    const id = e.target.dataset.id
+    fetch(`http://localhost:3000/hogs/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        greased: e.target.checked
+      })
+    })
   }
 
   render() {
@@ -40,6 +55,9 @@ class Hog {
     hogContainer.appendChild(hogCard)
     hogCard.addEventListener('click', e => {
       if (e.target.className.includes('delete')) this.deleteHog(e)
+    })
+    hogCard.addEventListener('click', e => {
+      if (e.target.className.includes('toggle')) this.greaseToggle(e)
     })
   }
 }

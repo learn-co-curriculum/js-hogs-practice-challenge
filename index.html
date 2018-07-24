@@ -18,15 +18,22 @@
       }
 
       #container {
-        width:1000px;
+        width:1279px;
         margin:auto;
         margin-top:50px;
+      }
+
+      #form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
       }
       
       .hog-card{
         float:left;
-        width:300px;
-        height: 500px;
+        width:393px;
+        height: 555px;
         background-color: pink;
         color: #000080;
         margin:15px;
@@ -40,6 +47,24 @@
   <body>
     <h1>Hog Farm</h1>
     <div id="container">
+      <div id="form">
+        <h3>New Hog</h3>
+        <form id="hog-form">
+          <input type="text" name="name" placeholder="name"/>
+          <br/>
+          <input type="text" name="specialty" placeholder="specialty"/>
+          <br/>
+          <input type="text" name="medal" placeholder="medal"/>
+          <br/>
+          <input type="text" name="weight" placeholder="weight"/>
+          <br/>
+          <input type="text" name="img" placeholder="img url"/>
+          <br/>
+          <span>greased: <input type="checkbox" name="greased" value="greased"></span>
+          <br/>
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
       <div id="hog-container">
       </div>
     </div>
