@@ -1,6 +1,6 @@
 This is a brief introduction to Hogwarts, which you'll be more fully introduced to in mod 4.
 
-Spin up the json-server to serve up your hogs. You can create divs and give them the class hog-card and put their information in there, so you'll get some styling. Most of the hog info is just text, but greased is a boolean, and it's better to display that as a checkbox, that is either checked if the hog is greased, or unchecked if not.
+Spin up the json-server to serve up your hogs (json-server --watch hogs.json). You can create divs and give them the class hog-card and put their information in there, so you'll get some styling. Most of the hog info is just text, but greased is a boolean, and it's better to display that as a checkbox, that is either checked if the hog is greased, or unchecked if not.
 
 First, figure out how to render all the hogs to the page.
 
