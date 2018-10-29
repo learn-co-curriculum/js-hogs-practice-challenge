@@ -2,7 +2,7 @@
 
 ## JavaScript Week 2 Project
 
-This is a brief introduction to Hogwarts, which you'll be more fully introduced to in mod 4 - Hogwarts: The React app for fans of prize-winning pigs.
+This is a brief introduction to the hogs you'll see in Hogwarts, which you'll be more fully introduced to in mod 4 - Hogwarts: The React app for fans of prize-winning pigs.
 
 ## Project deliverables:
 * create an index displaying all hogs, and their attributes. you can create divs and give them the class hog-card to get some styling
