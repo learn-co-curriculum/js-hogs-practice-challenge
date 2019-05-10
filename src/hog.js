@@ -55,8 +55,6 @@ class Hog {
     hogContainer.appendChild(hogCard)
     hogCard.addEventListener('click', e => {
       if (e.target.className.includes('delete')) this.deleteHog(e)
-    })
-    hogCard.addEventListener('click', e => {
       if (e.target.className.includes('toggle')) this.greaseToggle(e)
     })
   }
