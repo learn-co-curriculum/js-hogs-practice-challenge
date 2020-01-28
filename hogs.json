@@ -10,15 +10,6 @@
       "image": "./hog-imgs/mudblood.jpg"
     },
     {
-      "id": 1,
-      "name": "Porkchop",
-      "specialty": "Making friends",
-      "greased": true,
-      "weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water": 1.6,
-      "highest medal achieved": "silver",
-      "image": "./hog-imgs/porkchop.jpg"
-    },
-    {
       "id": 2,
       "name": "Cherub",
       "specialty": "truffle finder",
